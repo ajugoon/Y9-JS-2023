@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    
+    </head>
+
+    <body>
+
+        <h1> A Simple Calculator </h1>
+
+        <div>
+          <button onclick="addNums()">ADD</button>
+          <button onclick="subtractNums()">SUBTRACT</button>
+          <button onclick="multiplyNums()">MULTIPLY</button>
+          <button onclick="divideNums()">DIVIDE</button>
+        </div>
+
+        <input type="text" id="myNum1" value="Data 1">
+        <input type="text" id="myNum2" value="Data 2">
+
+        <p id="demo"></p>
+
+    </body>
+
+    <script>
+      
+        function addNums() {
+        var x = document.getElementById("myNum1").value;
+        var y = document.getElementById("myNum2").value;
+        var sum = parseInt(x) + parseInt(y);
+        document.getElementById("demo").innerHTML = sum;
+        }
+        
+    </script>
+
+</html>
+
