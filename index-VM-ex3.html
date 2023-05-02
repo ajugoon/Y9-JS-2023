@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    <!-- Sample program for Y8 Summative -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+        
+    <style type="text/css">
+
+    </style>
+
+    </head>
+
+    <body>
+
+        <h2> Blues Vending Machine Example </h2>
+
+        <div>
+            <button id="btn1" onclick = "button1()">$1.00</button>&nbsp;
+            <button id="btn2" onclick = "button2()">$5.00</button>&nbsp;
+            <button id="btn3" onclick = "button3()">$10.00</button>&nbsp;
+            <br>
+            <br>
+
+            <label for="creditChoice">Credit Choice:</label>&nbsp;
+            <h4 id="creditChoice">$$$</h4>&nbsp;
+            <br>
+
+            <label for="creditTotal">Credit Total:</label>&nbsp; 
+            <h4 id="creditTotal">$$$</h4>
+        </div>
+
+        <!-- Update labels where needed -->
+         
+        <hr>
+
+        <p id="itemChoices">*** Snack and Drink Choices ***</p>
+
+
+        <label for="pb1">Pop Inventory:</label>
+        <br>
+        <progress id="pb1" value="100" max="100"> 100% </progress>
+        <button id="buy1" onclick="updatePopCount()">Purchase Pop: $1.50</button>
+        <br>
+        <br>
+
+
+        <label for="pb2">Chips Inventory:</label>
+        <br>
+        <progress id="pb2" value="100" max="100"> 100% </progress>
+        <button id="buy2" onclick="updateChipsCount()">Purchase Chips: $2.00</button>
+        <br>
+        <br>
+
+      
+        <label for="pb3">Granola Bar Inventory:</label>
+        <br>
+        <progress id="pb3" value="100" max="100"> 100% </progress>
+        <button id="buy3" onclick="updateGranolaCount()">Purchase Granola Bar: $1.25</button>
+        <br>
+        <br>
+
+
+        <label for="pb4">Water Bottle Inventory:</label>
+        <br>
+        <progress id="pb4" value="100" max="100"> 100% </progress>
+        <button id="buy4" onclick="updateWaterCount()">Purchase Water Bottle: $1.00</button>
+        <br>
+        <br>
+
+        
+    </body>
+
+    <script>
+
+        var cansOfPop = 10;
+        var bagsOfChips = 10;
+        var granolaBars = 10;
+        var bottlesOfWater = 10;
+        var credit = 0.00;
+
+        // **************************************************************************************************************** //
+        // Create functionality for each button that adds or subtracts funds.
+            
+        function button1() {
+
+            // Show how much money was chosen
+            const choice = document.getElementById("creditChoice");
+            choice.innerHTML = "$1.00";   
+
+            // Show how much money there is in total to spend 
+            credit += 1.00;
+            const total = document.getElementById("creditTotal");
+            total.innerHTML = "$" + credit.toFixed(2); 
+
+        }//end function     
+
+        function button2() {
+
+            const choice = document.getElementById("creditChoice");
+            choice.innerHTML = "$5.00";
+            credit += 5.00
+            const total = document.getElementById("creditTotal");
+            total.innerHTML = "$" + credit.toFixed(2);
+
+        }//end function     
+
+        function button3() {
+
+            const choice = document.getElementById("creditChoice");
+            choice.innerHTML = "$10.00";
+            credit += 10.00
+            const total = document.getElementById("creditTotal");
+            total.innerHTML = "$" + credit.toFixed(2); 
+
+        }//end function  
+
+       
+        // **************************************************************************************************************** //
+        // Update the amount of each item and available funds after completing a purchase
+
+        function updatePopCount() {
+            cansOfPop --;
+            credit -= 1.50;
+
+            var width = cansOfPop * 10;
+            document.getElementById("pb1").value = width;
+           
+            const total = document.getElementById("creditTotal");
+            total.innerHTML = "$" + credit.toFixed(2);
+
+            console.log("You bought pop!");
+            console.log("pop left: " + cansOfPop);
+            console.log("pixel width 1: " + width);
+                    
+        }// end function 
+
+        function updateChipsCount() {
+
+            bagsOfChips --;
+            credit -= 2.00;
+
+            var width = bagsOfChips * 10;
+            document.getElementById("pb2").value = width;
+            
+            
+            const total = document.getElementById("creditTotal");
+            total.innerHTML = "$" + credit.toFixed(2); 
+
+            console.log("You bought chips!");
+            console.log("chips left: " + bagsOfChips);
+            console.log("pixel width 2: " + width);
+                    
+        }// end function 
+
+        function updateGranolaCount() {
+            granolaBars --;
+            credit -= 1.25;
+
+            var width = granolaBars * 10;
+            console.log("pixel width 3: " + width);
+           
+            const total = document.getElementById("creditTotal");
+            total.innerHTML = "$" + credit.toFixed(2); 
+
+            console.log("You bought a granola bar!");
+            console.log("granola bars left: " + granolaBars);
+            document.getElementById("pb3").value = width;
+                    
+        }// end function 
+
+        function updateWaterCount() {
+            bottlesOfWater --;
+            credit -= 1.00;
+
+            var width = bottlesOfWater * 10;
+            document.getElementById("pb4").value = width;
+           
+            const total = document.getElementById("creditTotal");
+            total.innerHTML = "$" + credit.toFixed(2); 
+
+            console.log("You bought a bottle or water!");
+            console.log("pop left: " + bottlesOfWater);
+            console.log("pixel width 4: " + width);
+                    
+        }// end function 
+ 
+    </script>
+
+</html>
