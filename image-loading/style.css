@@ -1,0 +1,36 @@
+  body {
+    margin: 0;
+    background: linear-gradient(to right, yellow 50%, blue 0%);   
+    height:100vh;
+    text-align:center;
+    color:#8bc78a;
+  }
+
+  img.locate {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    top: 30%; /* percentage distance from the top margin */
+    left: 43%; /* percentage distance from the left margin */
+  }
+
+  h1.option1 {
+    border: 15px solid green;
+    padding: 10px; /* This the space between the text and the green border */
+    border-bottom-left-radius: 25px;
+  }
+
+  h1.option2 {
+    border: 3px solid orange;
+    padding: 10px; /* This the space between the text and the orange border */
+    border-bottom-left-radius: 25px;
+  }
+
+  h2.option1 {
+    border: 4px dotted blue;
+  }
+
+  h2.option2 {
+    border: 4px dotted green;
+  }
