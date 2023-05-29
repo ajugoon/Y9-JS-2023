@@ -1,0 +1,147 @@
+/* Reference: https://www.w3schools.com/css/css_website_layout.asp  */
+
+body {
+  margin: 0;
+  background-color: orangered;
+}
+
+/* Style the header */
+
+.header {
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    width: 1200px;
+    height: 300px;
+    background: url("sustainable-cities.jpeg");
+    border: 5px solid darkolivegreen;
+
+}
+
+/* Style the text within the header */
+
+h1.option0 {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: darkmagenta;
+    border: 3px solid yellow;
+    padding: 5px;
+    padding-right: 10px;
+    font-family: cursive, sans-serif;
+    font-size: 30px;
+    font-style: italic;
+}
+
+
+/**********************************************************************************/
+/* Style the first box*/
+
+.rectangle1 {
+    position:absolute;
+    top: 450px;
+    left: 170px;
+    height: 300px;
+    width: 300px;
+    background-color: yellow;
+}
+
+/* Note that the text will be relative to the div */
+h1.option1 {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    color: darkolivegreen;
+    border: 3px solid purple;
+    padding: 5px;
+    padding-right: 10px;
+    font-family: cursive, sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    max-width: 40ch;
+    z-index: 1;
+}
+
+/**********************************************************************************/
+/* Style the second box*/
+
+.rectangle2 {
+    position:absolute;
+    top: 450px;
+    left: 570px;
+    height: 300px;
+    width: 300px;
+    background-color: yellow;
+}
+
+h1.option2 {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    color: darkolivegreen;
+    border: 3px solid purple;
+    padding: 5px;
+    padding-right: 10px;
+    font-family: cursive, sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    max-width: 40ch;
+    z-index: 1;
+}
+
+/**********************************************************************************/
+/* Style the third box*/
+
+.rectangle3 {
+    position:absolute;
+    top: 450px;
+    left: 970px;
+    height: 300px;
+    width: 300px;
+    background-color: yellow;
+}
+
+h1.option3 {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    color: darkolivegreen;
+    border: 3px solid purple;
+    padding: 5px;
+    padding-right: 10px;
+    font-family: cursive, sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    max-width: 40ch;
+    z-index: 1;
+}
+
+/**********************************************************************************/
+
+.rectangle4 {
+    position:absolute;
+    top: 800px;
+    left: 170px;
+    height: 300px;
+    width: 300px;
+    background-color: lightcyan;
+}
+
+.rectangle5 {
+    position:absolute;
+    top: 800px;
+    left: 570px;
+    height: 300px;
+    width: 300px;
+    background-color: lightsteelblue;
+}
+
+.rectangle6 {
+    position:absolute;
+    top: 800px;
+    left: 970px;
+    height: 300px;
+    width: 300px;
+    background-color: lightgoldenrodyellow;
+}
+
